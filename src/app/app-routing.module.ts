@@ -10,7 +10,23 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
+  {
+    path: 'eliminar',
+    loadChildren: () => import('./eliminar/eliminar.module').then( m => m.EliminarPageModule)
+  },
+  {
+    path: 'agregar',
+    loadChildren: () => import('./agregar/agregar.module').then( m => m.AgregarPageModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
+  },
+
 ];
 
 @NgModule({
